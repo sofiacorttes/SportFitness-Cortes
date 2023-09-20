@@ -1,0 +1,130 @@
+h1 {
+    font-family: $font-family;
+    color: $color-verde-marino;
+  }
+  
+  cuerpo {
+    background-color: $color-negro;
+  }
+  
+  .ayuda {
+    text-align: center;
+    color: $color-blanco;
+  }
+  
+  .contactos {
+    color: $color-blanco;
+  }
+  
+  .card {
+    text-align: center;
+    color: $color-blanco;
+  }
+  
+  .caja-1 {
+    text-align: center;
+    color: $color-blanco;
+    font-family: $font-family;
+  }
+  
+  .horarios {
+    text-align: center;
+    color: $color-blanco;
+    font-family: $font-family;
+  }
+  
+  .planes {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Ginebra, Verdana, sans-serif;
+    text-align: center;
+    color: $color-blanco;
+  }
+  
+  .titulo {
+    color: $color-negro;
+  }
+  
+  .texto {
+    color: $color-negro;
+  }
+  
+  .suscribir {
+    color: $color-suscribir;
+  }
+  
+  .nav {
+    float: inline-start;
+    
+    ul li {
+      list-style-type: none;
+      margin-left: 75px;
+      padding: 25px 0;
+      float: left;
+      
+      a {
+        text-decoration: none;
+        color: $color-blanco;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .contenedor {
+    color: $color-secundario;
+    text-align: center;
+  }
+  
+  .card-body {
+    background-color: $color-gris;
+    color: $color-negro;
+  }
+  
+  .card {
+    @include rotar-en-el-centro;
+  }
+  
+  /* Mixin de la animación */
+  @include keyframes(rotar-en-el-centro) {
+    0% {
+      -webkit-transform: rotate(-360deg);
+      transform: rotate(-360deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotate(0);
+      transform: rotate(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Media Query */
+  @media (max-width: 600px) {
+    cuerpo {
+      background-color: rgb(117, 200, 117);
+    }
+    
+    navegación {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    li {
+      list-style-type: none;
+      position: relative;
+      width: 120px;
+      
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 5px 10px;
+        width: 120px;
+        height: 30px;
+      }
+      
+      a:hover {
+        color: $color-negro;
+        background-color: $color-blanco;
+      }
+    }
+  }
+  
